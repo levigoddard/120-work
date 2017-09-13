@@ -5,4 +5,8 @@ This is my first text document for one of Dr. Musick's Media Arts courses.
 
 I added a new line to this file in my text editor, saved it, then changed it!!!
 
+HAHA!!
+
+I am now showing GitHub Desktop
+
 Add date 9/13/2017
