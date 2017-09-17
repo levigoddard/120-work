@@ -18,3 +18,5 @@ In this lesson I learned how to better use Atom and Git for coding. I worked on 
 2. I learned how to create a git repository and how to save it in a way to see each version and change.
 3. I learned what mark down was and how it differed from a normal text folder.
 4. I learned more about the differences between a text and word document.
+
+![Image of my editor](imageofedit.jpeg)
