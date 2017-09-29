@@ -12,6 +12,6 @@ function setup() {
 function draw() {
 
     // tell p5 to print the text string "Hello World!"
-    // This is going to be positioned at ( x: 60, y: 40 ).
-    text( "Hello World!", 30, 40 );
+    // This is going to be positioned at ( x: 60, y: 60 ).
+    text( "Hello World!", 60, 60 );
 }
