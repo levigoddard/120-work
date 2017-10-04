@@ -1,6 +1,6 @@
 function setup() {
     // create a canvas to draw my portrait on
-    createCanvas( 800, 1000 );
+    createCanvas( 800, 800 );
 }
 
 function draw() {
@@ -12,7 +12,7 @@ function draw() {
     push();
 
     // move the entire grid for this character to the center of the canvas
-    translate( 400, 800 );
+    translate( 400, 600 );
 
 
     // ** ARMS **********************************
