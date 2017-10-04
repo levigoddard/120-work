@@ -1,8 +1,6 @@
 ["Hello World!"](https://levigoddard.github.io/120-work/hw-4/)
 
 # *Week Four Summary*
-  This week
+  This week I Worked on a self-image using p5.js. I based most of my image using rect(). The reason I did this is because I view myself as a very boxy like person and this allowed me better design choices. I Went with a dark red background to contrast my shirt and pants.
 
 # *Further Discussion*
-
-I would like to know about what most websites use in relation to HTML and codes like it. I am sure we will learn about it more later in this course. If we do not, I would like to get a brief overview or links to such information.
