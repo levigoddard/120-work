@@ -1,3 +1,2 @@
-Empty p5 sketch.
-
-Please replace contents of this file with appropriate readme information after finishing your p5 sketch.
+# *Week Five Summary*
+This week I created a planet and a moon that orbits it. the mouse's Y axis controls its distance and speed and they both follow the mouse.
