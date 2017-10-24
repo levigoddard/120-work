@@ -1,11 +1,11 @@
 
 
 var ball = {};
-ball.width = 40;
-ball.x = 10;
-ball.y = 10;
-ball.delta_x = 1;
-ball.delta_y = 1;
+ball.width = 20;
+ball.x = .1;
+ball.y = .1;
+ball.delta_x = 1.5;
+ball.delta_y = 1.5;
 ball.scale_x = 1;
 ball.scale_y = 1;
 
@@ -30,6 +30,7 @@ function draw() {
     }
 
     fill(255);
+    fill( 'rgb(0, 150, 50)')
     ellipse(ball.x, ball.y, ball.width, ball.width);
 }
 
