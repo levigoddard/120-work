@@ -12,4 +12,4 @@ Line 3 to 10 create the variable (3) and the math controlling the balls size, an
 
 ## How did you alter the sketch?
 
-The first thing I did was change the size and starting location of the circle. I then added a color fill to the circle. 
+The first thing I did was change the size and starting location of the circle. I then added a color fill to the circle. I also speed up the ball and changed the angle of attack by increasing ball.delta. 
