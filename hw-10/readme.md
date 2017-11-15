@@ -1,3 +1,8 @@
-Empty p5 sketch.
+EmLevi Goddard, 50
 
-Please replace contents of this file with appropriate readme information after finishing your p5 sketch.
+
+# *Week Three Summary*
+
+
+
+# *Further Discussion*
