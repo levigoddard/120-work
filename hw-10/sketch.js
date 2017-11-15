@@ -73,10 +73,10 @@ function smileyFace( pos_x, pos_y, scale_x, scale_y ) {
     // 2. draw smiley face
     stroke( 0 );
     fill('rgba(159, 156, 155, 1)');
-    ellipse( 8, 24, 210 );
+    ellipse( 8, 24, 150 );
     noStroke();
     fill( 40, 255 );
-    arc( 0, 85, 95, 40, 0, PI );
+    arc( 0, 85, 95, 40, 0, HALF_PI );
     ellipse( -20, -15, 7 );
     ellipse( 20, -15, 7 );
 
