@@ -53,7 +53,7 @@ class MarchingDude {
         this.left_foot_angle = 0;
         this.right_foot_angle = 0;
         this.foot_angle_delta = random(3);
-        this.foot_angle_max = -20;
+        this.foot_angle_max = -80;
         this.active_foot = 0;
     }
 
