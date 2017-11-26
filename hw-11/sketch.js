@@ -1,66 +1,94 @@
-// Week 11
-
-
-// create a variable for the ball object
-let ball;
+let dudes = [];
+let num_of_dudes = 30;
+let bg_color;
 
 function setup() {
     createCanvas(windowWidth, windowHeight);
+    bg_color = color(34, 131, 157);
 
-    // create a new ball object of class type "Ball"
-    ball = new Ball(width / 2, height / 2, 50, 'rgb(113, 11, 51)');
+    for (let i = 0; i < num_of_dudes; i++) {
+        dudes.push( new MarchingDude() );
+    }
 }
 
 function draw() {
-    background(0);
+    background(bg_color);
 
-    // call the ball's methods
-    ball.display();
-    ball.move();
-    ball.edgeCheck();
+    for (var i = 0; i < dudes.length; i++) {
+        dudes[i].frame();
+    }
 }
 
 
-//////////////////////////////////////////////////
-//      BALL CLASS DEFINITION
-//////////////////////////////////////////////////
-class Ball {
-    constructor(x, y, size, color) {
-        this.color = color;
-        this.size = size;
-        this.rad = this.size / 2;
-        this.posX = x;
-        this.posY = y;
-        this.deltaX = random(-2, 2);
-        this.deltaY = random(-2, 2);
+
+
+
+/////////////////////////////////////////
+//      Marching Dude Class
+/////////////////////////////////////////
+
+/**
+ * MarchingDude Class. Creates creepy marching things.
+ *
+ */
+class MarchingDude {
+
+    constructor() {
+        this.size_w = random(20, 80);
+        this.size_h = random(20, 80);
+        this.loc_x = random(width);
+        this.loc_y = random(height);
+        this.move_x = random(-2, 2);
+        this.move_y = random(-2, 2);
+        this.body_color = color(random(255), random(255), random(255));
+        this.size_w = this.size_w;
+        this.size_h = this.size_h;
+        this.eye_x = this.size_w * 0.165;
+        this.eye_y = this.size_h * 0.33 * -1;
+        this.eye_size = this.size_w * 0.25;
+    }
+
+    // call this method once per frame to update marching dude
+    frame() {
+        this.feetAngle();
+        this.display();
+        this.move();
     }
 
     display() {
+
         push();
-        // remove the balls outer stroke
-        noStroke();
-        // set the balls fill color
-        fill(this.color);
-        // set the position of the ball
-        translate(this.posX, this.posY);
-        ellipse(0, 0, this.size);
+
+        translate(this.loc_x, this.loc_y);
+        fill(this.body_color);
+
+        ellipse(0, 0, this.size_w, this.size_h);
+
+        // eyes
+        fill(255);
+        ellipse(-this.eye_x, this.eye_y, this.eye_size, this.eye_size);
+        ellipse(this.eye_x, this.eye_y, this.eye_size, this.eye_size);
+
         pop();
+
     }
 
     move() {
-        this.posX += this.deltaX;
-        this.posY += this.deltaY;
-    }
+        this.loc_x += this.move_x;
+        this.loc_y += this.move_y;
 
-    edgeCheck() {
-        // check if the ball has hit a vertical wall (left or right walls)
-        if (this.posX + this.rad >= width || this.posX - this.rad <= 0) {
-            this.deltaX *= -1;
-        }
-        // check if the ball has hit a horizontal wall (top or bottom walls)
-        if (this.posY + this.rad >= height || this.posY - this.rad <= 0) {
-            this.deltaY *= -1;
+        if (this.loc_x >= width) {
+            this.move_x *= -1;
+            this.loc_x = width - abs(this.move_x);
+        } else if (this.loc_x <= 0) {
+            this.move_x *= -1;
+            this.loc_x = abs(this.move_x);
+        } else if (this.loc_y >= height) {
+            this.move_y *= -1;
+            this.loc_y = height - abs(this.move_y);
+        } else if (this.loc_y <= 0) {
+            this.move_y *= -1;
+            this.loc_y = abs(this.move_y);
         }
     }
 }
-3.
