@@ -1,5 +1,5 @@
 let dudes = [];
-let num_of_dudes = 5;
+let num_of_dudes = 20;
 let bg_color;
 
 function setup() {
